@@ -23,7 +23,7 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package com.teunsteenbekkers.cookie_manager;
+package com.teunsteenbekkers.cookiemanager;
 
 import android.util.Log;
 
