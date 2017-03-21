@@ -29,18 +29,18 @@ var exec = require('cordova/exec');
 /**
  * @constructor
  */
-function Cookies() {
+function CookieManager() {
     
 }
 
 /**
- * Get device info
+ * Clears cookies
  *
  * @param {Function} successCallback The function to call when cookies cleared successfully
  * @param {Function} errorCallback The function to call when there was an error (OPTIONAL)
  */
-Cookies.prototype.clear = function(successCallback, errorCallback) {
-    exec(successCallback, errorCallback, "Cookies", "clear", []);
+CookieManager.prototype.clear = function(successCallback, errorCallback) {
+    exec(successCallback, errorCallback, "CookieManager", "clear", []);
 };
 
-module.exports = new Cookies();
+module.exports = new CookieManager();
