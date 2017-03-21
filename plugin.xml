@@ -10,7 +10,7 @@
         <engine name="cordova" version=">=3.0.0" />
     </engines>
 
-    <js-module src="www/cookieManager.js" name="cookieManager">
+    <js-module src="www/cookie_manager.js" name="cookieManager">
         <clobbers target="cookieManager" />
     </js-module>
 
