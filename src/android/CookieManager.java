@@ -24,7 +24,7 @@
  */
 
 
-package com.bez4pieci.cookies;
+package com.teunsteenbekkers.cookie_manager;
 
 import android.util.Log;
 import android.webkit.CookieManager;
@@ -36,8 +36,8 @@ import org.json.JSONException;
 
 import java.lang.reflect.Method;
 
-public class Cookies extends CordovaPlugin {
-    private final String TAG = "CookiesPlugin";
+public class CookieManager extends CordovaPlugin {
+    private final String TAG = "CookieManagerPlugin";
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
