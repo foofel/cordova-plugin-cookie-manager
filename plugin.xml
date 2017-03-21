@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.bez4pieci.cookies" version="0.0.1">
+        id="cordova-plugin-cookie-manager" version="0.0.1">
     <name>Cookies</name>
-    <description>Phonegap/Cordova plugin that allows you to clear cookies of the webview. Use it for logging out the user, restart analytics session etc.</description>
+    <description>Cordova/PhoneGap plugin that allows you to clear cookies from WebViews. Use it for logging out the user, restart analytics session etc.</description>
     <license>MIT</license>
-    <keywords>cordova,phonegap,cookies</keywords>
+    <keywords>cordova, phonegap, cookies, cookie, manager, clear</keywords>
     
     <engines>
         <engine name="cordova" version=">=3.0.0" />
     </engines>
 
-    <js-module src="www/cookies.js" name="cookies">
-        <clobbers target="cookies" />
+    <js-module src="www/cookie_manager.js" name="cookie_manager">
+        <clobbers target="cookie_manager" />
     </js-module>
 
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
-            <feature name="Cookies">
-                <param name="ios-package" value="CDVCookies"/>
+            <feature name="CookieManager">
+                <param name="ios-package" value="CDVCookieManager"/>
             </feature>
         </config-file>
-        <header-file src="src/ios/CDVCookies.h" />
-        <source-file src="src/ios/CDVCookies.m" />
+        <header-file src="src/ios/CDVCookieManager.h" />
+        <source-file src="src/ios/CDVCookieManager.m" />
     </platform>
 
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Cookies" >
-                <param name="android-package" value="com.bez4pieci.cookies.Cookies"/>
+            <feature name="CookieManager" >
+                <param name="android-package" value="com.teunsteenbekkers.cookie_manager.CookieManager"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/Cookies.java" target-dir="src/com/bez4pieci/cookies" />
+        <source-file src="src/android/CookieManager.java" target-dir="src/com/teunsteenbekkers/cookie_manager" />
     </platform>
 </plugin>
