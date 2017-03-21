@@ -20,7 +20,7 @@ $ phonegap local plugin add https://github.com/teunsteenbekkers/cordova-plugin-c
 ## Usage
 
 ```javascript
-window.cookie_manager.clear(function() {
+window.cookieManager.clear(function() {
   console.log('Cookies cleared!');
 });
 ```
