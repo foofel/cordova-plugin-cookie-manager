@@ -23,9 +23,9 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-#import "CDVCookies.h"
+#import "CDVCookieManager.h"
 
-@implementation CDVCookies
+@implementation CDVCookieManager
 
 - (void)clear:(CDVInvokedUrlCommand*)command
 {
