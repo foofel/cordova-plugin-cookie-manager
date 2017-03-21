@@ -1,26 +1,27 @@
-Phonegap Cookies Plugin
+Cordova/PhoneGap Cookie Manager Plugin
 =======
 
-Phonegap/Cordova plugin that allows you to clear cookies of the webview. Use it for logging out the user, restart analytics session etc.
+PhoneGap/Cordova plugin that allows you to clear cookies from WebViews. You can use it for stuff like logging out users, restarting analytics sessions and the like.
 
 ## Why a plugin?
 
-On Phonegap `document.cookie` is empty, since index.html and all other files are loaded with `file://` protocol.
-Phonegap manages cookies internally, but doesn't expose any function for clearing them.
+In a Cordova/PhoneGap app `document.cookie` is empty, since index.html and all other files are loaded with the `file://` protocol.
+Cordova/PhoneGap manages cookies internally, but doesn't expose any means for clearing them.
 
 ## Installation
 
-Cookies is compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman) and ready for the [PhoneGap 3.0 CLI](http://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface_add_features), here's how it works with the CLI:
+CookieManager is compatible with [Cordova Plugman](https://github.com/apache/cordova-plugman) and ready for the [PhoneGap 3.0 CLI](http://docs.phonegap.com/en/3.0.0/guide_cli_index.md.html#The%20Command-line%20Interface_add_features), here's how it works with the CLI:
 
 ```
-$ phonegap local plugin add https://github.com/bez4pieci/Phonegap-Cookies-Plugin.git
+$ cordova plugin add https://github.com/teunsteenbekkers/cordova-plugin-cookie-manager.git
+$ phonegap local plugin add https://github.com/teunsteenbekkers/cordova-plugin-cookie-manager.git
 ```
 
 ## Usage
 
 ```javascript
-window.cookies.clear(function() {
-	console.log('Cookies cleared!');
+window.cookie_manager.clear(function() {
+  console.log('Cookies cleared!');
 });
 ```
 
