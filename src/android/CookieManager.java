@@ -23,7 +23,6 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-
 package com.teunsteenbekkers.cookie_manager;
 
 import android.util.Log;
@@ -37,20 +36,20 @@ import org.json.JSONException;
 import java.lang.reflect.Method;
 
 public class CookieManager extends CordovaPlugin {
-    private final String TAG = "CookieManagerPlugin";
+  private final String TAG = "CookieManagerPlugin";
 
-    @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        if ("clear".equals(action)) {
-            this.clear();
-            callbackContext.success();
-            return true;
-        }
-        return false; // Returning false results in a "MethodNotFound" error.
+  @Override
+  public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    if ("clear".equals(action)) {
+      this.clear();
+      callbackContext.success();
+      return true;
     }
+    return false; // Returning false results in a "MethodNotFound" error.
+  }
 
-    public void clear() {
-        Log.v(TAG, "Clearing cookies...");
-        webView.getCookieManager().clearCookies();
-    }
+  public void clear() {
+    Log.v(TAG, "Clearing cookies...");
+    webView.getCookieManager().clearCookies();
+  }
 }
