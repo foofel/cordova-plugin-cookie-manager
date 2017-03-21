@@ -26,7 +26,6 @@
 package com.teunsteenbekkers.cookie_manager;
 
 import android.util.Log;
-import android.webkit.CookieManager;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
